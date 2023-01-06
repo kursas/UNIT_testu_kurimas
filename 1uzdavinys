@@ -1,0 +1,37 @@
+# -*- coding:utf-8 -*-
+# Pasiimti anksčiau sukurtą programos kodą (4 paskaita "Funkcijos")
+# • Funkcijas perdaryti taip, kad jos gražintų duomenis
+# • Sukurti UNIT testą visoms funkcijoms
+# • Kiekvienai funkcijai turi būti mažiausiai 3 patikrinimai
+# • Maksimaliai patobulinti kodą, nuolatos leidžiant sukurtą UNIT testą
+import unittest
+import testai
+
+class TestFunkcijos(unittest.TestCase):
+    def test_suma(self):
+        self.assertEqual(12,testai.skaiciu_suma(5,6,1))
+        self.assertEqual(30,testai.skaiciu_suma(15,0,15))
+        self.assertEqual(-35, testai.skaiciu_suma(-15, 5, -25))
+
+    def test_saraso_suma(self):
+        sarasas = [5, 5, 2, 8]
+        self.assertEqual(20, testai.saraso_suma(sarasas))
+        sarasas = [-5, -5, 2, 8]
+        self.assertEqual(0, testai.saraso_suma(sarasas))
+        sarasas = [-5, -155, 2.6, 80]
+        self.assertEqual(-77.4, testai.saraso_suma(sarasas))
+
+    def test_didziausias_skaicius(self):
+        self.assertEqual(6,testai.didziausias_skaicius(5,6,1))
+        self.assertEqual(25,testai.didziausias_skaicius(15,0,25))
+
+if __name__=='__main__':
+    unittest.main()
+#output
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+Process finished with exit code 0
